@@ -1,7 +1,7 @@
 - entry_type: "violation_sequence"
   metadata:
     format_version: "2.0"
-    uuid:
+    uuid: 841700c0-7dd9-4b4a-b894-e62a49498c14
     creation_time: 2024-04-29T13:13:07+02:00
     producer:
       name: "Paulina"
