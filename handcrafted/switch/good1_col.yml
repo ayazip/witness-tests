@@ -10,9 +10,9 @@
       input_files:
       - "switch.c"
       input_file_hashes:
-        switch.c: ""
+        switch.c: f1928d8383dacd05e0928c5a893035f4f2c7fa38018c60f967361841fa5c2aef
       specification: "G ! call(reach_error())"
-      data_model: "ILP32"
+      data_model: "LP64"
       language: "C"
   content:
   - segment:
@@ -34,7 +34,7 @@
         location:
           file_name: "switch.c"
           line: 14
-          column: 9 
+          column: 9
   - segment:
     - waypoint:
         type: "target"
