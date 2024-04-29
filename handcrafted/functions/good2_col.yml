@@ -1,0 +1,102 @@
+- entry_type: "violation_sequence"
+  metadata:
+    format_version: "2.0"
+    uuid: 
+    creation_time: 
+    producer:
+      name: "Paulina"
+      version: "thesis"
+    task:
+      input_files:
+      - "functions.c"
+      input_file_hashes:
+        functions.c:  
+      specification: "G ! call(reach_error())"
+      data_model: "LP64"
+      language: "C"
+  content:
+  - segment:
+    - waypoint:
+        type: "function_return"
+        action: "follow"
+        constraint:
+          value: "\\result == 1"
+          format: "acsl_expression"
+        location:
+          file_name: "functions.c"
+          line: 41
+          column: 35
+  - segment:
+    - waypoint:
+        type: "function_return"
+        action: "follow"
+        constraint:
+          value: "\\result == 0"
+          format: "acsl_expression"
+        location:
+          file_name: "functions.c"
+          line: 10
+          column: 35
+  - segment:
+    - waypoint:
+        type: "function_return"
+        action: "follow"
+        constraint:
+          value: "\\result == 0"
+          format: "acsl_expression"
+        location:
+          file_name: "functions.c"
+          line: 22
+          column: 35
+  - segment:
+    - waypoint:
+        type: "function_return"
+        action: "avoid"
+        constraint:
+          value: "\\result <= 0"
+          format: "acsl_expression"
+        location:
+          file_name: "functions.c"
+          line: 34
+          column: 35
+    - waypoint:
+        type: "assumption"
+        action: "follow"
+        constraint:
+          value: "y == 100"
+          format: "c_expression"
+        location:
+          file_name: "functions.c"
+          line: 44
+          column: 5
+  - segment:
+    - waypoint:
+        type: "function_return"
+        action: "follow"
+        constraint:
+          value: "\\result == 10"
+          format: "acsl_expression"
+        location:
+          file_name: "functions.c"
+          line: 22
+          column: 35
+  - segment:
+    - waypoint:
+        type: "function_return"
+        action: "follow"
+        constraint:
+          value: "\\result == 1"
+          format: "acsl_expression"
+        location:
+          file_name: "functions.c"
+          line: 34
+          column: 35
+  - segment:
+    - waypoint:
+        type: "target"
+        action: "follow"
+        location:
+          file_name: "functions.c"
+          line: 36
+          column: 9
+

@@ -1,0 +1,86 @@
+- entry_type: "violation_sequence"
+  metadata:
+    format_version: "2.0"
+    uuid: 
+    creation_time: 
+    producer:
+      name: "Paulina"
+      version: "thesis"
+    task:
+      input_files:
+      - "functions.c"
+      input_file_hashes:
+        functions.c:  
+      specification: "G ! call(reach_error())"
+      data_model: "LP64"
+      language: "C"
+  content:
+  - segment:
+    - waypoint:
+        type: "function_enter"
+        action: "avoid"
+        location:
+          file_name: "functions.c"
+          line: 41
+    - waypoint:
+        type: "function_enter"
+        action: "follow"
+        location:
+          file_name: "functions.c"
+          line: 43
+  - segment:
+    - waypoint:
+        type: "function_enter"
+        action: "avoid"
+        location:
+          file_name: "functions.c"
+          line: 16
+    - waypoint:
+        type: "function_return"
+        action: "follow"
+        constraint:
+          value: "\\result == 0"
+          format: "acsl_expression"
+        location:
+          file_name: "functions.c"
+          line: 43
+  - segment:
+    - waypoint:
+        type: "function_enter"
+        action: "follow"
+        location:
+          file_name: "functions.c"
+          line: 44
+  - segment:
+    - waypoint:
+        type: "branching"
+        action: "avoid"
+        constraint:
+          value: "true"
+        location:
+          file_name: "functions.c"
+          line: 27
+    - waypoint:
+        type: "function_enter"
+        action: "follow"
+        location:
+          file_name: "functions.c"
+          line: 45
+  - segment:
+    - waypoint:
+        type: "function_return"
+        action: "follow"
+        constraint:
+          value: "\\result < 0"
+          format: "acsl_expression"
+        location:
+          file_name: "functions.c"
+          line: 34
+  - segment:
+    - waypoint:
+        type: "target"
+        action: "follow"
+        location:
+          file_name: "functions.c"
+          line: 36
+

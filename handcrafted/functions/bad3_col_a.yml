@@ -1,0 +1,95 @@
+- entry_type: "violation_sequence"
+  metadata:
+    format_version: "2.0"
+    uuid: 
+    creation_time: 
+    producer:
+      name: "Paulina"
+      version: "thesis"
+    task:
+      input_files:
+      - "functions.c"
+      input_file_hashes:
+        functions.c:  
+      specification: "G ! call(reach_error())"
+      data_model: "LP64"
+      language: "C"
+  content:
+  - segment:
+    - waypoint:
+        type: "function_enter"
+        action: "avoid"
+        location:
+          file_name: "functions.c"
+          line: 41
+          column: 35
+    - waypoint:
+        type: "function_enter"
+        action: "follow"
+        location:
+          file_name: "functions.c"
+          line: 43
+          column: 18
+  - segment:
+    - waypoint:
+        type: "function_enter"
+        action: "avoid"
+        location:
+          file_name: "functions.c"
+          line: 16
+          column: 25
+    - waypoint:
+        type: "function_return"
+        action: "follow"
+        constraint:
+          value: "\\result == 0"
+          format: "acsl_expression"
+        location:
+          file_name: "functions.c"
+          line: 43
+          column: 18
+  - segment:
+    - waypoint:
+        type: "function_enter"
+        action: "follow"
+        location:
+          file_name: "functions.c"
+          line: 44
+          column: 18
+  - segment:
+    - waypoint:
+        type: "branching"
+        action: "avoid"
+        constraint:
+          value: "true"
+        location:
+          file_name: "functions.c"
+          line: 27
+          column: 5
+    - waypoint:
+        type: "function_enter"
+        action: "follow"
+        location:
+          file_name: "functions.c"
+          line: 45
+          column: 10
+  - segment:
+    - waypoint:
+        type: "function_return"
+        action: "follow"
+        constraint:
+          value: "\\result < 0"
+          format: "acsl_expression"
+        location:
+          file_name: "functions.c"
+          line: 34
+          column: 35
+  - segment:
+    - waypoint:
+        type: "target"
+        action: "follow"
+        location:
+          file_name: "functions.c"
+          line: 36
+          column: 9
+

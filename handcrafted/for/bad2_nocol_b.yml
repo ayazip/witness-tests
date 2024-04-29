@@ -1,0 +1,61 @@
+- entry_type: "violation_sequence"
+  metadata:
+    format_version: "2.0"
+    uuid: 
+    creation_time: 
+    producer:
+      name: "Paulina"
+      version: "thesis"
+    task:
+      input_files:
+      - "for.c"
+      input_file_hashes:
+        for.c:  
+      specification: "G ! call(reach_error())"
+      data_model: "LP64"
+      language: "C"
+  content:
+  - segment:
+    - waypoint:
+        type: "branching"
+        action: "follow"
+        constraint:
+          value: "true"
+        location:
+          file_name: "for.c"
+          line: 11
+  - segment:
+    - waypoint:
+        type: "branching"
+        action: "avoid"
+        constraint:
+          value: "false"
+        location:
+          file_name: "for.c"
+          line: 13
+    - waypoint:
+        type: "branching"
+        action: "follow"
+        constraint:
+          value: "false"
+        location:
+          file_name: "for.c"
+          line: 17
+  - segment:
+    - waypoint:
+        type: "function_return"
+        action: "follow"
+        constraint:
+          value: "\\result == 20"
+          format: "acsl_expression"
+        location:
+          file_name: "for.c"
+          line: 20
+  - segment:
+    - waypoint:
+        type: "target"
+        action: "follow"
+        location:
+          file_name: "for.c"
+          line: 18
+
